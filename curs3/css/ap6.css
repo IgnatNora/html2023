@@ -1,0 +1,29 @@
+p{
+    color: green;
+}
+
+#p1,#p2{
+    color:brown;
+}
+
+.pblue{
+    color: blue;
+}
+
+.pfont{
+    font-size: 35px;
+    color: yellow;
+}
+
+div p{
+    color: chocolate;
+}
+
+.iddiv .pdiv{
+    color: aquamarine;
+}
+
+/* aceaste stiluri se aplica la copilul direct al elementului */
+.iddiv > .pdiv{
+    color: aquamarine;
+}
