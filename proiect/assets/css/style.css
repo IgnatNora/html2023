@@ -2,6 +2,8 @@
 html{ 
     height: 100%;
   }
+  /* toate datele importate */
+  @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Yeseva+One&display=swap');
   
   *{ 
     margin: 0;
@@ -33,7 +35,8 @@ html{
     padding: 0 0 5px 0;}
   
   h1, h2, h3{ 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Anonymous Pro', monospace;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-size: 1.5em;
     margin: 0 0 15px 0;
     padding: 15px 0 5px 0;
@@ -189,7 +192,10 @@ html{
   
   ul#menu li a
   { 
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Yeseva One', cursive;
+    font-weight: bold;
+    font-size: 18px;
     display: block; 
     float: left; 
     height: 20px;
