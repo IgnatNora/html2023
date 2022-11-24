@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>
+            Formular
+        </h1>
+        <form action="" method="post" enctype="multipart/form-data">
+            <label for="oras">Selecteaza oras</label>
+            <select name="oras" id="oras">
+                <option value="">Selecteaza...</option>
+                <option value="1">Bucuresti</option>
+                <option value="2">Iasi</option>
+                <option value="3">Oradea</option>
+                <option value="4">Brasov</option>
+            </select>
+            <br>
+            <label for="cursuri">Cursurile dorite</label>
+            <select name="cursuri[]" id="cursuri" multiple>
+                <option value="php">PHP</option>
+                <option value="css">Css</option>
+                <option value="pyton">Pyton</option>
+            </select>
+            <br>
+            <label for="mesaj">Mesajul ta</label>
+            <textarea name="mesaj" id="mesaj" cols="30" rows="10"></textarea>
+            <br>
+            <label for="cv">Adauga CV</label>
+            <!-- 3 conditii ca sa trimitem fisiere din punct de vedere frontend: 1. input: file
+   2. post ca metoda in formular si 3. enctype-->
+            <input type="file" name="cv" id="cv">
+            <br>
+            <fieldset>
+                <figcaption>
+                    Program cursuri
+                </figcaption>
+                <input type="radio" name="timp" id="dimineata" value="dimineata">dimineata
+                <input type="radio" name="timp" id="seara" value="seara">seara
+                <input type="radio" name="timp" id="pranz" value="pranz">pranz
+            </fieldset>
+            <br>
+            <input type="checkbox" name="termeni" id="" checked>Termeni
+            <input type="checkbox" name="abonat" id="">Abonat
+            <br>
+            <input type="submit" value="Trimite">
+    </div>
+</body>
+
+</html>

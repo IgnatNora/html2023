@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulare</title>
+</head>
+
+<body>
+    <h1>Acesta este primul meu formular</h1>
+    <!-- action este un atribut optional, dar e recomandat să fie trecut
+    metoda - cum trimit datele de la client catre server
+    action - unde trimit datele -->
+    <!-- validarea datelor se fac pe partea de server -->
+    <form action="" method="post">
+        <!-- filtrele se fac prin GET
+        datele se transmit prin POST -->
+        <!-- name e obligatoriu și trebuie sa aibă valoare unică -->
+        <label for="nune">Nume</label><br>
+        <input type="text" name="nume" id="nume" placeholder="Nume" required><br>
+        <label for="prenume">Prenume</label><br>
+        <input type="text" name="prenume" id="prenume" placeholder="Prenume" required><br>
+        <label for="adresa">Adresă</label><br>
+        <input type="text" name="adresa" id="adresa" placeholder="Adresă"><br>
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email" placeholder="Email" required><br>
+        <label for="parola">Parola</label><br>
+        <input type="password" name="parola" id="parola" placeholder="Parola" required><br>
+
+        <label for="gen">Gen</label><br>
+        <input type="radio" name="gen" id="m" value="m"> M </input><br>
+        <input type="radio" name="gen" id="f" value="f"> F </input><br>
+        <input type="radio" name="gen" id="n" value="n"> N </input><br>
+        <label for="curs">Perioadă curs</label> <br>
+        <input type="radio" name="curs" id="dimineata" checked value="dimineata"> Dimineața 
+        <input type="radio" name="curs" id="pranz" disabled value="pranz"> Prânz 
+        <input type="radio" name="curs" id="seara" value="seara"> Seara <br>
+        <!-- pentru a trimite toate valorile in backend, dar cu o singura verificare avem in denumire [] -->
+        <label for="limbaje">Limbaje de programare</label> <br>
+        <input type="checkbox" name="limbaje[]" id="php" value="php"> PHP <br>
+        <input type="checkbox" name="limbaje[]" id="html" value="html"> HTML <br>
+        <input type="checkbox" name="limbaje[]" id="javascript" value="javascript"> JavaScript <br>
+        <input type="checkbox" name="limbaje[]" id="css" value="css"> CSS <br>
+        <input type="checkbox" name="limbaje[]" id="python" value="python"> Python <br>
+
+
+
+
+        <!-- putem să punem și buton -->
+        <input type="submit" value="Trimite datele">
+        <input type="reset" value="Sterge datele">
+    </form>
+</body>
+
+</html>

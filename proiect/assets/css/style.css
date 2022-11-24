@@ -3,7 +3,16 @@ html{
     height: 100%;
   }
   /* toate datele importate */
-  @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Yeseva+One&display=swap');
+/*   
+  @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+  @font-face {
+    font-family: 'yeseva_oneregular';
+    src: url('../fonts/Yeseva_One_Kit/yesevaone-regular-webfont.woff2') format('woff2'),
+         url('../fonts/Yeseva_One_Kit/yesevaone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
   
   *{ 
     margin: 0;
@@ -15,7 +24,8 @@ html{
     max-width: 1000px;
   }
   body{
-    font-family: Helvetica,Arial, sans-serif;
+    /* font-family: Helvetica,Arial, sans-serif; */
+    font-family: 'Anonymous Pro', monospace;
     font-size: 1em;
     background: #ffffff;
     color: #555555;}
@@ -35,7 +45,7 @@ html{
     padding: 0 0 5px 0;}
   
   h1, h2, h3{ 
-    font-family: 'Anonymous Pro', monospace;
+    font-family: 'yeseva_oneregular';
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-size: 1.5em;
     margin: 0 0 15px 0;
@@ -87,6 +97,7 @@ html{
     margin: 0 0 6px 0; 
     padding: 0 0 4px 5px;
     line-height: 1.5em;
+    border-radius: 8px;
   }
   
   ol { 
@@ -131,16 +142,16 @@ html{
     
   #logo{ 
     width: 100%;
-    max-width: 1000px;
+    max-width: 2100px;
     position: relative;
-    height: 205px;
-    background: rgba(29, 29, 29, 0.65);
+    height: 100px;
+    background: #4B7F52;
   }
   
   #logo #logo_text { 
-    position: absolute; 
-    top: 10px;
-    left: 0;
+    position: relative; 
+    top: -5px;
+    left: 25%;
   }
   
   #logo h1, #logo h2 { 
@@ -157,7 +168,7 @@ html{
   }
   
   #logo_text h1 a .logo_colour { 
-    color: #f54709;
+    color: #B8D8D8;
   }
   
   #logo_text a:hover .logo_colour { 
@@ -168,32 +179,37 @@ html{
   #logo_text h2
   { font-size: 120%;
     padding: 4px 0 0 0;
-    color: #B48A7C;
+    color: whitesmoke;
   }
   
     /* MENIU */
   #menubar{ 
-    width: 872px;
+    width: 100%;
+    max-width: 2100px;
     height: 45px;
-    padding-right: 8px;
-    background: #2D2D2D;
-    border-top: 1px solid #3D3D3D;
+    /* padding-right: 8px; */
+    background: #4B7F52;
+    border-top: 3px solid whitesmoke;
   } 
   
   ul#menu
-  { float: right;
-    margin: 0;}
+  { 
+    position: absolute;
+    left: 18%;
+    margin: 0;
+  }
   
-  ul#menu li
-  { float: left;
-    padding: 0 0 0 9px;
+  ul#menu li{
+    float: left;
+    padding: 3px;
     list-style: none;
-    margin: 8px 4px 0 4px;}
+    margin: 3px 4px 0 40px;
+  }
   
   ul#menu li a
   { 
-    /* font-family: Arial, Helvetica, sans-serif; */
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Anonymous Pro', monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
     font-weight: bold;
     font-size: 18px;
     display: block; 
@@ -201,24 +217,30 @@ html{
     height: 20px;
     padding: 6px 20px 5px 20px;
     text-align: center;
-    color: #ffffff;
+    color: #222222;
     text-decoration: none;
-    background: #5E4238;} 
+    background: #B8D8D8;
+    border-radius: 11px;
+  } 
   
-  ul#menu li.selected a
-  { height: 20px;
-    padding: 6px 20px 5px 11px;}
+  /* ul#menu li.selected a
+  { 
+    height: 20px;
+    padding: 6px 20px 5px 11px;
+  } */
   
   ul#menu li.selected
-  { margin: 8px 4px 0 13px;
-    background: #B48A7C;}
+  { 
+    /* margin: 3px 4px 0 4px; */
+    background: #012A36;
+  }
   
   ul#menu li.selected a, ul#menu li.selected a:hover
-  { background: #B48A7C;
+  { background: #012A36;
     color: #ffffff;}
   
   ul#menu li a:hover
-  { color: #B48A7C;}
+  { color: #012A36;}
   
   /* BANNER */
   #banner{  
@@ -231,7 +253,7 @@ html{
     max-width: 980px;
     height: 180px;
     margin-bottom: 20px;
-    border: 10px double #5E4238;
+    border: 10px double #B98B82;
     /* border-style: double; */
   }
   
@@ -406,4 +428,25 @@ html{
 
   table tr:nth-col(n/2-1){
       background: pink;
+    }
+
+  
+    @media (max-width:577px){
+      ul#menu{
+        width: 100%;
+      }
+      ul#menu li{
+        display: block;
+        float: right;
+        margin: 3px 4px 0 64px;
+      }
+      ul#menu li a{
+        display: block;
+        float: right;
+        margin: 3px 4px 0 64px;
+        border-radius: 0px;
+      }
+      /* ul #menu li :not(.selected){
+        display: none;
+      } */
     }
